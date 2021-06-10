@@ -3,12 +3,16 @@
 <head>
     <style>
         .mainBlock {
-          width: 300px;
-          height: 300px;
+          width: 235px;
+          height: 425px;
           border: 5px outset rgb(151, 7, 247);
           background-color: rgb(17, 226, 233);    
           text-align: left;
-          margin: 100px;
+          margin: 30px;
+        }
+        p {
+          line-height: 5;
+          margin-left: 20px;
         }
     </style>
     <meta charset="UTF-8">
@@ -18,17 +22,31 @@
 </head>
 <body>
     <h1>Mario Kart 8 Deluxe Randomizer</h1>
+    <div class="itemBlocks">
+      <img id="CharIB" src="https://static.wikia.nocookie.net/mariokart/images/5/5b/Item_Box_-_Mario_Kart_Wii.png" alt="Item Box" style="position:absolute; width:75px; height:75px; top:115px; left:170px">
+      <img id="VehIB"  src="https://static.wikia.nocookie.net/mariokart/images/5/5b/Item_Box_-_Mario_Kart_Wii.png" alt="Item Box" style="position:absolute; width:75px; height:75px; top:215px; left:170px">
+      <img id="WherIB" src="https://static.wikia.nocookie.net/mariokart/images/5/5b/Item_Box_-_Mario_Kart_Wii.png" alt="Item Box" style="position:absolute; width:75px; height:75px; top:315px; left:170px">
+      <img id="GlirIB" src="https://static.wikia.nocookie.net/mariokart/images/5/5b/Item_Box_-_Mario_Kart_Wii.png" alt="Item Box" style="position:absolute; width:75px; height:75px; top:415px; left:170px">
+    </div>
+    <!-- <img src="https://static.wikia.nocookie.net/mariokart/images/5/5b/Item_Box_-_Mario_Kart_Wii.png" alt="Item Box" style="width:75px;height:75px;"> -->
     <div class="mainBlock">
-        <div>Character:</div>
-        <div>Vehicle:</div>
-        <div>Wheels:</div>
-        <div>Glider:</div>
+        <p>Character:</p>
+        <p>Vehicle:</p>
+        <p>Wheels</p>
+        <p>Glider:</p>
       </div>
         <!-- Character:
         Vehicle:
         Wheels:
         Glider: -->
     <h3>Randomizer Button</h3>
-    <button>Randomize</button>
+    <button id=ranButton onclick="hwgFunction()">Randomize</button>
+
+    <script>
+      function hwgFunction() {
+        alert("Here we go!");
+        document.getElementById("ranButton").innerHTML = "Here we go!";
+      }
+    </script>
 </body>
 </html>
