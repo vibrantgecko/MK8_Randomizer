@@ -1,0 +1,35 @@
+MK8 Randomizer Vision
+
+- Similar to existing one that is in italian
+- Make a simpler version    
+    - Current version can set number of randomized setups (up to 12)
+    - This version 1 will have the following:
+        1. Randomize button
+            - This will be the trigger for the random setup
+        2. White Rectangle box
+            - Character
+            - Vehicle
+            - Wheels
+            - Glider
+            
+
+MK8 Randomizer Outline
+
+1. Structure
+    a. Title: MK8 Randomizer
+    b. Elements:
+        I. Character (text and image)
+        II. Vehicle  (text and image)    
+        III. Wheels  (text and image)   
+        IV. Glider   (text and image)  
+    c. Button
+
+2. Style
+    a. White Rectangle
+    b. Black text
+    c. Light blue button w/ purple text
+
+3. Behavior
+    a. Placeholders will be replaced by randomly generated setup 
+    b. Button triggers the randomizer 
+        - Not sure if there some function that can accomplish this or if it needs to go to a seperate web page 
