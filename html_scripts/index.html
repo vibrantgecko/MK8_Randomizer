@@ -51,16 +51,29 @@
     </script>
     <script>
       var characters = ["mii","mario","luigi","peach","daisy","rosalina","tanooki_mario","cat_peach","yoshi","toad","koopa_troopa","shy_guy","lakitu","toadette","king_boo","baby_mario","baby_luigi","baby_peach","baby_daisy","baby_rosalina","metal_mario","pink_gold_peach","wario","waluigi","donkey_kong","bowser","dry_bones","bowser_jr","dry_bowser","lemmy","larry","wendy","ludwig","iggy","roy","morton","inkling_girl","inkling_boy","link","villager_boy","villager_girl","isabelle"]
+      var vehicles = ["wild_wiggler","standard_kart","pipe_frame","mach_8","steel_driver","cat_cruiser","circuit_special","trispeeder","badwagon","prancer","biddybuggy","landship","sneeker","sports_coupe","gold_standard","gla","w_25_silver_arrow","300_sl_roadster","blue_falcon","tanooki_kart","b_dasher","streetle","p_wing","koopa_clown","standard_bike","the_duke","flame_rider","varmint","mr_scooty","city_tripper","master_cycle_zero","comet","sport_bike","jet_bike","yoshi_bike","master_cycle","standard_atv","teddy_buggy","bone_rattler","splat_buggy","inkstriker"]
       function changeImage() {
-        // String[] characters = {"mii","mario"};
-        var image = document.getElementById('CharIB');
-        // var placeholder = "mii"
-        var placeholder = characters[Math.round(Math.random() * 41)]
-        if (image.src.match("https://static.wikia.nocookie.net/mariokart/images/5/5b/Item_Box_-_Mario_Kart_Wii.png")) {
-            image.src = "/images/characters/" + placeholder + ".png";
+
+        var char_image = document.getElementById('CharIB');
+        var veh_image = document.getElementById('VehIB');
+
+        var char_placeholder = characters[Math.round(Math.random() * 41)]
+        var veh_placeholder = vehicles[Math.round(Math.random() * 40)]
+
+        if (char_image.src.match("https://static.wikia.nocookie.net/mariokart/images/5/5b/Item_Box_-_Mario_Kart_Wii.png")) {
+            char_image.src = "/images/characters/" + char_placeholder + ".png";
+            char_image.style = "position:absolute; width:auto; height:75px; top:115px; left:170px";
+
+            veh_image.src = "/images/vehicles/" + veh_placeholder + ".png";
+            veh_image.style = "position:absolute; width:auto; height:75px; top:215px; left:140px";
+
         }
         else {
-            image.src = "https://static.wikia.nocookie.net/mariokart/images/5/5b/Item_Box_-_Mario_Kart_Wii.png";
+            char_image.src = "https://static.wikia.nocookie.net/mariokart/images/5/5b/Item_Box_-_Mario_Kart_Wii.png";
+            char_image.style = "position:absolute; width:75px; height:75px; top:115px; left:170px";
+
+            veh_image.src = "https://static.wikia.nocookie.net/mariokart/images/5/5b/Item_Box_-_Mario_Kart_Wii.png";
+            veh_image.style = "position:absolute; width:75px; height:75px; top:215px; left:170px"
         }
       }
     </script>
