@@ -22,9 +22,7 @@
 </head>
 <body>
     <h1>Mario Kart 8 Deluxe Randomizer</h1>
-    <img src="https://mariokart.fandom.com/de/wiki/Mii?file=Mario_Kart_8_Deluxe_Icon_Mii.png" alt="mii icon" style="width:75px; height:75px;">
-    <img alt="Mii icon from Mario Kart 8, with access to amiibo Racing Suits." src="https://mario.wiki.gallery/images/thumb/a/ab/Mii_amiibo_MK8.png/32px-Mii_amiibo_MK8.png" decoding="async" width="32" height="32" srcset="https://mario.wiki.gallery/images/thumb/a/ab/Mii_amiibo_MK8.png/48px-Mii_amiibo_MK8.png 1.5x, https://mario.wiki.gallery/images/thumb/a/ab/Mii_amiibo_MK8.png/64px-Mii_amiibo_MK8.png 2x" data-file-width="128" data-file-height="128">
-    <img src="/resources/sheets/91/94161.png?updated=1532101346" alt="Mario Kart 8 Deluxe - Character Icons">
+    <!-- <img id="mii" src="/images/mii_icon.png" alt="it box" style="width:75px; height:75px;"> -->
     <div class="itemBlocks">
       <img id="CharIB" src="https://static.wikia.nocookie.net/mariokart/images/5/5b/Item_Box_-_Mario_Kart_Wii.png" alt="Item Box" style="position:absolute; width:75px; height:75px; top:115px; left:170px">
       <img id="VehIB"  src="https://static.wikia.nocookie.net/mariokart/images/5/5b/Item_Box_-_Mario_Kart_Wii.png" alt="Item Box" style="position:absolute; width:75px; height:75px; top:215px; left:170px">
@@ -43,12 +41,27 @@
         Wheels:
         Glider: -->
     <h3>Randomizer Button</h3>
-    <button id=ranButton onclick="hwgFunction()">Randomize</button>
-
+    <button id=ranButton onclick="changeImage()">Randomize</button>
+    
     <script>
       function hwgFunction() {
         alert("Here we go!");
         document.getElementById("ranButton").innerHTML = "Here we go!";
+      }
+    </script>
+    <script>
+      var characters = ["mii","mario","luigi","peach","daisy","rosalina","tanooki_mario","cat_peach","yoshi","toad","koopa_troopa","shy_guy","lakitu","toadette","king_boo","baby_mario","baby_luigi","baby_peach","baby_daisy","baby_rosalina","metal_mario","pink_gold_peach","wario","waluigi","donkey_kong","bowser","dry_bones","bowser_jr","dry_bowser","lemmy","larry","wendy","ludwig","iggy","roy","morton","inkling_girl","inkling_boy","link","villager_boy","villager_girl","isabelle"]
+      function changeImage() {
+        // String[] characters = {"mii","mario"};
+        var image = document.getElementById('CharIB');
+        // var placeholder = "mii"
+        var placeholder = characters[Math.round(Math.random() * 41)]
+        if (image.src.match("https://static.wikia.nocookie.net/mariokart/images/5/5b/Item_Box_-_Mario_Kart_Wii.png")) {
+            image.src = "/images/characters/" + placeholder + ".png";
+        }
+        else {
+            image.src = "https://static.wikia.nocookie.net/mariokart/images/5/5b/Item_Box_-_Mario_Kart_Wii.png";
+        }
       }
     </script>
 </body>
